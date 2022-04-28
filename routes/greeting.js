@@ -9,7 +9,7 @@ greeting.route('/')
 
 greeting.route('/:name')
 .get((req,res)=>{
-    res.status(200).json({message: `Hello, ${req.params.name}`})
+    res.status(200).json({message: `Wow! Hello there, ${req.params.name}`})
 })
 
 
