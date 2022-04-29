@@ -9,7 +9,7 @@ tipCalculator.route('/')
 
 tipCalculator.route('/:total/:tipPercentage')
 .get((req,res)=>{
-    res.status(200).json({message: `You should tip , ${req.params.total*req.params.tipPercentage/100}`})
+    res.status(200).json({message: `You should tip $${req.params.total*req.params.tipPercentage/100}`})
 })
 
 
