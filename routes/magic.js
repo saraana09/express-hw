@@ -19,8 +19,7 @@ const responses = ["It is certain",
     "Outlook not so good", 
     "Very doubtful"]
 const querystring = require('querystring')
-const answer = ""
-
+const answer = responses[Math.floor(Math.random() * responses.length)];
 
 const magic = express.Router()
 
@@ -31,9 +30,7 @@ magic.route('/')
 
 magic.route('/:querystring')
 .get((req,res)=>{
-    res.status(200).json({message: `you asked ${req.params.querystring}`})
+    res.status(200).json({message: `answer is: ${answer}`})
 })
-
-
 
 module.exports = magic
